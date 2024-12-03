@@ -1043,17 +1043,17 @@ def L3T_L4T_JET(
         # )
 
 
-        MCD12_connnection = MCD12C1(
-            working_directory=static_directory,
-            download_directory=MCD12_directory
-        )
+        # MCD12_connnection = MCD12C1(
+        #     working_directory=static_directory,
+        #     download_directory=MCD12_directory
+        # )
 
         # FIXME replace FLiESLUT sub-module with package
         FLiES_LUT_model = FLiESLUT(
             working_directory=working_directory,
             static_directory=static_directory,
             GEOS5FP_connection=GEOS5FP_connection,
-            MCD12_connnection=MCD12_connnection,
+            # MCD12_connnection=MCD12_connnection,
             save_intermediate=save_intermediate,
             show_distribution=show_distribution
         )
@@ -1553,7 +1553,7 @@ def L3T_L4T_JET(
             working_directory=working_directory,
             static_directory=static_directory,
             GEOS5FP_connection=GEOS5FP_connection,
-            MCD12_connnection=MCD12_connnection,
+            # MCD12_connnection=MCD12_connnection,
             save_intermediate=save_intermediate,
             show_distribution=show_distribution
         )
