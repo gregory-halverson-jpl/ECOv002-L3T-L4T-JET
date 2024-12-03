@@ -262,8 +262,8 @@ class FLiESLUT(FLiES):
             GEOS5FP_connection: GEOS5FP = None,
             GEOS5FP_download: str = None,
             GEOS5FP_products: str = None,
-            MCD12_connnection: MCD12C1 = None,
-            MCD12_download: str = None,
+            # MCD12_connnection: MCD12C1 = None,
+            # MCD12_download: str = None,
             intermediate_directory: str = None,
             preview_quality: int = DEFAULT_PREVIEW_QUALITY,
             ANN_model: Callable = None,
@@ -294,13 +294,13 @@ class FLiESLUT(FLiES):
         self.ANN_model = ANN_model
         self.dynamic_atype_ctype = dynamic_atype_ctype
 
-        if MCD12_connnection is None:
-            MCD12_connnection = MCD12C1(
-                working_directory=static_directory,
-                download_directory=MCD12_download
-            )
+        # if MCD12_connnection is None:
+        #     MCD12_connnection = MCD12C1(
+        #         working_directory=static_directory,
+        #         download_directory=MCD12_download
+        #     )
 
-        self.MCD12 = MCD12_connnection
+        # self.MCD12 = MCD12_connnection
 
     def FLiES_LUT(
             self,

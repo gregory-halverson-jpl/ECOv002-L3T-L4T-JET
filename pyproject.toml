@@ -27,6 +27,7 @@ dependencies = [
     "h5py",
     "koppengeiger",
     "matplotlib",
+    "MCD12C1-2019-v006",
     "modisci>=1.1.1",
     "msgpack",
     "msgpack_numpy",

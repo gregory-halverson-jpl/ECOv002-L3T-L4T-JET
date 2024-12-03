@@ -19,8 +19,10 @@ import rasters as rt
 from rasters import Raster, RasterGrid, RasterGeometry
 from geos5fp import GEOS5FP
 
+from MCD12C1_2019_v006 import load_MCD12C1_IGBP
+
 from ..FLiES import FLiES
-from ..MCD12.MCD12C1 import MCD12C1
+# from ..MCD12.MCD12C1 import MCD12C1
 from ..SRTM import SRTM
 from ..model.model import DEFAULT_PREVIEW_QUALITY, DEFAULT_RESAMPLING
 
@@ -420,8 +422,8 @@ class MOD16(FLiES):
             GEOS5FP_connection: GEOS5FP = None,
             GEOS5FP_download: str = None,
             GEOS5FP_products: str = None,
-            MCD12_connnection: MCD12C1 = None,
-            MCD12_download: str = None,
+            # MCD12_connnection: MCD12C1 = None,
+            # MCD12_download: str = None,
             intermediate_directory=None,
             preview_quality: int = DEFAULT_PREVIEW_QUALITY,
             ANN_model: Callable = None,
@@ -463,18 +465,19 @@ class MOD16(FLiES):
             include_preview=include_preview
         )
 
-        if MCD12_connnection is None:
-            MCD12_connnection = MCD12C1(
-                working_directory=static_directory,
-                download_directory=MCD12_download
-            )
+        # if MCD12_connnection is None:
+        #     MCD12_connnection = MCD12C1(
+        #         working_directory=static_directory,
+        #         download_directory=MCD12_download
+        #     )
 
-        self.MCD12 = MCD12_connnection
+        # self.MCD12 = MCD12_connnection
         self.downscale_air = downscale_air
         self.downscale_vapor = downscale_vapor
 
     def IGBP(self, geometry: RasterGeometry = None, resampling: str = None, **kwargs) -> Raster:
-        return self.MCD12.IGBP(geometry=geometry, resampling=resampling, **kwargs)
+        # return self.MCD12.IGBP(geometry=geometry, resampling=resampling, **kwargs)
+        return load_MCD12C1_IGBP(geometry=geometry)
 
     def IGBP_subset(self, geometry: RasterGeometry, resampling: str = None, buffer=3, **kwargs):
         return self.IGBP(geometry=geometry.bbox, resampling=resampling, buffer=buffer, **kwargs)
