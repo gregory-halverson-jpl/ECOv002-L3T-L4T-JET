@@ -31,8 +31,8 @@ from ECOv002_granules import ET_COLORMAP, SM_COLORMAP, WATER_COLORMAP, CLOUD_COL
 from .exit_codes import *
 from .BESS.BESS import BESS
 from .runconfig import read_runconfig, ECOSTRESSRunConfig
-from .FLiES import BlankOutputError
-from .FLiES.FLiESLUT import FLiESLUT
+from FLiESANN import BlankOutputError
+from FLiESLUT import FLiESLUT
 from .LPDAAC.LPDAACDataPool import LPDAACServerUnreachable
 from .MCD12.MCD12C1 import MCD12C1
 from .MOD16.MOD16 import MOD16
