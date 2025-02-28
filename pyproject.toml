@@ -17,13 +17,15 @@ classifiers = [
 dependencies = [
     "affine",
     "astropy",
+    "breathing-earth-system-simulator",
     "colored_logging",
     "ECOv002-CMR>=1.0.5",
     "ECOv002-granules>=1.0.3",
     "FLiESANN>=1.1.2",
+    "FLiESLUT",
     "gedi-canopy-height",
     "geopandas",
-    "geos5fp>=1.0.4",
+    "geos5fp>=1.0.5",
     "h5py",
     "koppengeiger>=1.0.4",
     "matplotlib",
@@ -59,8 +61,12 @@ requires-python = ">=3.10"
 
 [project.optional-dependencies]
 dev = [
+    "build",
     "pytest>=6.0",
     "pytest-cov",
+    "jupyter",
+    "pytest",
+    "twine"
 ]
 
 [tool.setuptools.package-data]
