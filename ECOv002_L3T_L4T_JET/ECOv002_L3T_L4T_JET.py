@@ -34,7 +34,6 @@ from .runconfig import read_runconfig, ECOSTRESSRunConfig
 from FLiESANN import BlankOutputError
 from FLiESLUT import FLiESLUT
 from .LPDAAC.LPDAACDataPool import LPDAACServerUnreachable
-from .MCD12.MCD12C1 import MCD12C1
 from .MOD16.MOD16 import MOD16
 from .PTJPL import PTJPL
 from .PTJPLSM import PTJPLSM
